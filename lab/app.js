@@ -11,7 +11,7 @@ const app = createServer((req, res) => {
   if(pathname === '/index.html') {
   
     res.statusCode = 200;
-    fs.readFile('./index.html', (err, data) => {
+    fs.readFile('public/index.html', (err, data) => {
       if(err) throw err;
       res.end(data);
       console.log('TCL: app -> data', data);
